@@ -11,8 +11,9 @@ Australia and Bangladesh.
 - 🔍 **Keyword research** — intent clustering and page-level mapping
 - 🔗 **Link building** — prospecting, outreach, follow-up, anchor strategy
 - 🧩 **On-page & technical SEO** — metadata, internal links, schema, indexation
-- 📊 **Reporting** — Google Search Console, GA4, Looker Studio
+- 📊 **Reporting** — Google Search Console, Looker Studio, Sheets
 - 🗂️ **Web research & data** — structured, QA'd, at scale
+- 🚀 **Publishing** — GitHub, Vercel, Supabase
 
 ### Find me
 

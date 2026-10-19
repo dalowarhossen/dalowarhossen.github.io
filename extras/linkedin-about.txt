@@ -7,8 +7,9 @@ What I do day to day:
 • Link building — prospecting, personalised outreach, follow-up and anchor strategy
 • On-page optimisation: titles, headings, internal links and schema
 • Technical SEO checks: crawlability, indexation, canonicals, redirects
-• Reporting with Google Search Console, GA4 and Looker Studio
+• Reporting with Google Search Console, Looker Studio and Sheets
 • Web research and structured data work for campaigns
+• Publishing and small web builds with GitHub, Vercel and Supabase
 
 I care about the part after the audit: changes actually shipped, results actually tracked, and a report a client can read without a translator.
 
