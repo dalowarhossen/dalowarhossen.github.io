@@ -1,0 +1,9 @@
+# Local OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Local preview helpers
+_dark-test.html
+_mobile-test.html
