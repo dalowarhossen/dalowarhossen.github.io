@@ -51,6 +51,7 @@
   --paper: #f6f3ec;
   --paper-raised: #fbf9f4;
   --paper-sunk: #ece7dc;
+  --panel-alternate: #e5eee8;
   --ink: #14120f;
   --ink-soft: #4b463d;
   --ink-faint: #6b655a;
@@ -87,6 +88,7 @@ html[data-theme="dark"] {
   --paper: #100f0d;
   --paper-raised: #171613;
   --paper-sunk: #0b0a09;
+  --panel-alternate: #18251f;
   --ink: #f3efe6;
   --ink-soft: #bdb6a9;
   --ink-faint: #8e8779;
@@ -630,6 +632,13 @@ html[data-theme="dark"] .theme-toggle .moon {
 .section {
   padding-block: clamp(4.5rem, 9vw, 8rem);
   position: relative;
+  background-color: var(--paper);
+}
+/* Alternate full-width panels to break up the long page in both themes. */
+#about,
+#work,
+#experience {
+  background-color: var(--panel-alternate);
 }
 .section + .section {
   border-top: 1px solid var(--line);
@@ -1512,6 +1521,12 @@ html[data-theme="dark"] .theme-toggle .moon {
   }
   .section {
     padding-block: 1.5rem;
+  }
+  .section,
+  #about,
+  #work,
+  #experience {
+    background-color: #fff;
   }
   .reveal {
     opacity: 1;
