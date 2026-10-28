@@ -282,6 +282,18 @@ p {
   color: var(--accent-ink);
   transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
 }
+.brand-mark.brand-photo {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line-strong);
+  background: #fff;
+}
+.brand-photo::before {
+  content: none;
+}
 .nav {
   display: flex;
   align-items: center;
