@@ -52,6 +52,7 @@
   --paper-raised: #fbf9f4;
   --paper-sunk: #ece7dc;
   --panel-alternate: #e5eee8;
+  --fact-surface: #edf2f8;
   --ink: #14120f;
   --ink-soft: #4b463d;
   --ink-faint: #6b655a;
@@ -89,6 +90,7 @@ html[data-theme="dark"] {
   --paper-raised: #171613;
   --paper-sunk: #0b0a09;
   --panel-alternate: #18251f;
+  --fact-surface: #192330;
   --ink: #f3efe6;
   --ink-soft: #bdb6a9;
   --ink-faint: #8e8779;
@@ -707,9 +709,9 @@ html[data-theme="dark"] .theme-toggle .moon {
 .fact-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--paper-raised);
-  padding: clamp(1.4rem, 3vw, 1.9rem);
-  box-shadow: var(--shadow-sm);
+  background: var(--fact-surface);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-shadow: 0 8px 28px -20px var(--line-strong);
 }
 .about-portrait {
   width: 100%;
@@ -726,41 +728,59 @@ html[data-theme="dark"] .theme-toggle .moon {
   max-width: 680px;
 }
 .fact-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
   font-family: var(--font-mono);
   font-size: 0.64rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-faint);
-  font-weight: 500;
-  margin-bottom: 1.1rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.fact-card h3::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--accent);
 }
 .facts {
   display: grid;
-  gap: 0.9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(1.25rem, 4vw, 2.5rem);
 }
 .facts li {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  padding-bottom: 0.9rem;
-  border-bottom: 1px dashed var(--line);
-  font-size: 0.86rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  min-width: 0;
+  padding-block: 1.1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
 }
-.facts li:last-child {
+.facts li:nth-last-child(-n + 2) {
   border-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 0.25rem;
 }
 .facts .k {
   color: var(--ink-faint);
-  flex: 0 0 auto;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
 }
 .facts .v {
-  text-align: right;
+  text-align: left;
   font-weight: 600;
+  line-height: 1.5;
 }
 .facts .v.available {
   color: var(--good);
+  background: var(--good-soft);
+  border-radius: 100px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.76rem;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -771,6 +791,7 @@ html[data-theme="dark"] .theme-toggle .moon {
   height: 6px;
   border-radius: 50%;
   background: currentColor;
+  flex-shrink: 0;
 }
 .stat-row {
   display: grid;
