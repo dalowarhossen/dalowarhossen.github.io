@@ -711,17 +711,83 @@ html[data-theme="dark"] .theme-toggle .moon {
   padding: clamp(1.4rem, 3vw, 1.9rem);
   box-shadow: var(--shadow-sm);
 }
+.profile-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper-raised);
+  box-shadow: var(--shadow-md);
+}
+.profile-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+}
+.profile-card-top .mono {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+.profile-card-mark {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.profile-photo-wrap {
+  position: relative;
+  isolation: isolate;
+  padding: 1.5rem 2rem;
+  background: repeating-linear-gradient(135deg, transparent 0 18px, var(--line) 18px 19px),
+    var(--accent-soft);
+}
+.profile-photo-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 180px;
+  height: 180px;
+  inset: 1rem auto auto 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.14;
+}
 .about-portrait {
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  margin: 0 auto 1.5rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
+  margin-inline: auto;
+  border: 6px solid var(--paper-raised);
+  border-radius: 50%;
   background: #fff;
-  box-shadow: var(--shadow-sm);
+}
+.profile-caption {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1.5rem;
+  border-top: 3px solid var(--accent);
+}
+.profile-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+.profile-role {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.profile-location {
+  color: var(--ink-faint);
+  font-size: 0.74rem;
 }
 .fact-card h3 {
   font-family: var(--font-mono);
